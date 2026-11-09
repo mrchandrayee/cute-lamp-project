@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d19">
+
+  <!-- Primary SEO -->
+  <title>Cute Lamp — Interactive Pull-Cord Lamp | mrchandrayee</title>
+  <meta name="description" content="An adorable interactive desk lamp with a pull cord, glowing light, and cute face expression. Pure HTML, CSS & JavaScript — no dependencies.">
+  <meta name="keywords" content="cute lamp, interactive lamp, CSS animation, JavaScript, pull cord, web design, mrchandrayee, frontend">
+  <meta name="author" content="mrchandrayee">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mrchandrayee.github.io/cute-lamp-project/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrchandrayee.github.io/cute-lamp-project/">
+  <meta property="og:title" content="Cute Lamp — Interactive Pull-Cord Lamp | mrchandrayee">
+  <meta property="og:description" content="An adorable interactive desk lamp with a pull cord, glowing light, and cute face. Pure HTML, CSS & JavaScript.">
+  <meta property="og:image" content="https://mrchandrayee.github.io/cute-lamp-project/preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mrchandrayee.github.io/cute-lamp-project/">
+  <meta name="twitter:title" content="Cute Lamp — Interactive Pull-Cord Lamp | mrchandrayee">
+  <meta name="twitter:description" content="An adorable interactive desk lamp with a pull cord, glowing light, and cute face. Pure HTML, CSS & JavaScript.">
+  <meta name="twitter:image" content="https://mrchandrayee.github.io/cute-lamp-project/preview.png">
+  <meta name="twitter:creator" content="@mrchandrayee">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Cute Lamp — Interactive Pull-Cord Lamp",
+    "description": "An adorable interactive desk lamp with a pull cord, glowing light, and cute face expression. Pure HTML, CSS & JavaScript.",
+    "url": "https://mrchandrayee.github.io/cute-lamp-project/",
+    "author": { "@type": "Person", "name": "mrchandrayee", "url": "https://github.com/mrchandrayee" },
+    "applicationCategory": "WebApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <h1>Cute Lamp</h1>
+    <section class="lamp-scene" aria-label="Interactive cute lamp">
+      <div class="lamp" id="lamp">
+        <div class="shade">
+          <div class="face">
+            <span class="eye eye-left"></span><span class="eye eye-right"></span>
+            <span class="cheek cheek-left"></span><span class="cheek cheek-right"></span>
+            <span class="mouth"></span>
+          </div>
+        </div>
+        <div class="bulb-glow"></div>
+        <div class="neck"></div>
+        <div class="stem"></div>
+        <div class="base"></div>
+        <div class="cord-track">
+          <div class="cord" id="cord" role="button" tabindex="0" aria-label="Pull the lamp cord to toggle the light">
+            <span class="cord-string"></span><span class="cord-handle"></span>
+          </div>
+        </div>
+        <div class="light" id="light"></div>
+      </div>
+      <p class="hint" id="hint">PULL THE CORD TO TURN ON THE LIGHT</p>
+    </section>
+    <section class="code-panel" aria-label="Code preview">
+      <div class="code-column">
+        <h2>CSS</h2>
+        <pre><code>.light {
+  opacity: 0;
+  transition: opacity .12s;
+  filter: drop-shadow(
+    0 0 40px #ffe6a3
+  );
+}
+
+.lamp.on .light {
+  opacity: 1;
+}</code></pre>
+      </div>
+      <div class="code-column">
+        <h2>JS</h2>
+        <pre><code>// pull the cord to toggle
+
+const lamp = $('.lamp')
+const cord = $('.cord')
+
+cord.onpointerdown = drag
+
+function drag(e) {
+  if (pull(e) &gt; DETENT)
+    lamp.classList.toggle('on')
+}</code></pre>
+      </div>
+    </section>
+    <footer>MADE WITH <span>♥</span> &nbsp; TRY PULLING THE LITTLE CORD</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
