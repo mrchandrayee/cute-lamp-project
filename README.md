@@ -49,6 +49,12 @@ cute-lamp-project/
 
 ---
 
+## 🏷️ Topics
+
+`cute-lamp` `pull-cord` `css-animation` `javascript` `html-css-js` `frontend` `interactive` `web-design`
+
+---
+
 ## 👨‍💻 Author
 
 **mrchandrayee** · [GitHub](https://github.com/mrchandrayee) · [Profile](https://github.com/mrchandrayee/mrchandrayee)
